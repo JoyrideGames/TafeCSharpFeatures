@@ -7,6 +7,7 @@ namespace ArraysTwo
 
     public class WeaponS : MonoBehaviour
     {
+        public GameObject muzzleFlash;
         public int damage = 10;
         public int maxBullets = 30;
         public float fireInterval = 0.2f;
@@ -57,7 +58,7 @@ namespace ArraysTwo
             //1. Instantiate a bullet cloan
             GameObject cloan = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             //2. Create direction variable for bullet and rotating
-            Vector2 direction = target.position - target.position;
+            Vector2 direction = target.position - transform.position;
             //Then normalize number for later
             direction.Normalize();
             //3. Rotate the weapon to direction
@@ -88,3 +89,22 @@ namespace ArraysTwo
 ///spwanTimer += Time.deltaTime;
 ///if(fireTimer >= fireInterval)
 ///{SpawnBullet();
+///
+
+//public GameObject projectilePrefab;
+//public Transform spawnPoint;
+
+ //   Instantiate(muzzleFlashPrefab, Transform.position, Quaternion.identity);
+
+  //  change transform.position to spawnPoint.position
+
+
+    //in shooting (audio)
+   // [Required component]audiosource
+
+   // header"audio
+//public float minPitch = 1;
+//[Range(-3, 3)] public float 
+
+
+ //   sound.pitch = min
