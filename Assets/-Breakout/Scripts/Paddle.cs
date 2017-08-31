@@ -9,6 +9,8 @@ public class Paddle : MonoBehaviour {
         public float movementSpeed = 20f;
         public Ball currentBall; //Ball that should be attached to the paddle as a child
                                  //public Vector2[] directions; // List of directions for the ball to choose from
+        private bool ballFired = true;
+
 
         //Directions array defaults to two values
         public Vector2[] directions = new Vector2[]
@@ -35,9 +37,10 @@ public class Paddle : MonoBehaviour {
 
         void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && ballFired == true)
             {
                 Fire();
+                ballFired = false;
             }
         }
 
